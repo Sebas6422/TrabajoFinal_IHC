@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="logo-cine.ico">
+    <title>Cine Sp4cex</title>
+    <!-- BOX ICONS -->
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" href="ccs/reset.css">
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/estilos2.css">
+    <link rel="stylesheet" href="css/style4.css">
+    <link rel="icon" href="/images/logo-cine.ico">
+    <script src="js/app.js" defer></script>
+</head>
+<body>
+
+    
+<!-- Encabezado Dashboard -->
+
+
+        <div th:replace="menu :: #menu-dashboard"></div>
+
+
+        <div style="margin-left: 17rem;">
+        <section class="section-1">
+			<header class="Titu">REGISTROS DE PRODUCTOS</header>
+            <div class="card--container">
+			<form >
+				<div>
+					<img src="" alt="avatar"id="img" />
+					<label for="foto">Subir<input type="file" name="foto" id="foto" accept="image/*" /></label>
+				</div>
+                <div class="input-box">
+                    <label>Comidas</label>
+                    <select class="form-select" id="comidas" onchange="calcularPrecio()">
+                        <option value="">Seleccione una opcion</option>
+                        <option value="1">Pop Corn - chico</option>
+                        <option value="2">Pop Corn - mediano</option>
+                        <option value="3">Pop Corn - grade</option>
+                        <option value="4">Pop Corn - gigante</option>
+                        <option value="5">Hot-Dog</option>
+                      </select>
+                </div>
+                <div class="input-box">
+					<label>Cantidad</label>
+                    <input type="number" id="cant" value="0"/>
+					
+				</div>
+                <div class="input-box">
+                    <label>Bebidas</label>
+                    <select class="form-select" id="bebidas" onchange="calcularPrecio()">
+                        <option value="">Seleccione una opcion</option>
+                        <option value="1">Gaseosa - chica</option>
+                        <option value="2">Gaseosa - mediana</option>
+                        <option value="3">Gaseosa - botella</option>
+                      </select>
+                </div>
+				<div class="input-box">
+					<label>Cantidad</label>
+                    <input type="number" id="cant2" value="0" class="input" min="1" max="50" required/>
+					
+				</div>
+				<div class="input-box">
+					<label>Precio</label>
+                    <input type="number" id="precio" value="0" step="0.01" />
+				</div>
+                <center>
+                    <button>Registrar</button>
+                    <button>Cancelar</button>
+                </center>
+
+			</form>
+        </div>
+			<br>
+            <div class="attendance">
+                <div class="attendance-list">
+                    <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Producto</th>
+                            <th>Cantidad</th>
+                            <th>Precio</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Pop Corn - chico + gaseosa - chica</td>
+                            <td>1</td>
+                            <td>S/. 17.50</td>
+                            <td><button>View</button></td>
+                        </tr>
+                        <tr class="active">
+                            <td>Pop corn chico + Pop corn mediano + gaseosa mediana </td>
+                            <td>3</td>
+                            <td>S/. 30.50</td>
+                            <td><button>View</button></td>
+                        </tr>
+                        <tr>
+                            <td>Pop corn gigante + gaseosa botella</td>
+                            <td>2</td>
+                            <td>S/. 26.00</td>
+                            <td><button>View</button></td>
+                        </tr>
+                    </tbody>
+                    </table>
+                </div>
+            </div>
+			<script src="producto.js"></script>
+		</section>
+    </div>
+</body>
+</html>

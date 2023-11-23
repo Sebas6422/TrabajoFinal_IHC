@@ -1,0 +1,405 @@
+/* FONTS GOOGLE */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
+/* VARIABLES */
+
+
+:root {
+    --blanco: #E0E0E0;
+    --azul-opacidad: #184463;
+    --bg-menu: #003053;
+    --bg-body: #C7E1FF;
+}
+
+/* GENERALES */
+
+
+.imgop{
+    filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(68deg) brightness(97%) contrast(108%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    color: var(--blanco);
+}
+
+/* LAYOUT */
+
+.menu-dashboard {
+    max-width: 150px;
+    height: 100%;
+    background: var(--bg-menu);
+    padding: 20px;
+    transition: max-width .3s ease;
+}
+
+.top-menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.top-menu .logo {
+    display: flex;
+    align-items: center;
+}
+
+.top-menu .logo img {
+    width: 40px;
+    transition: width .3s ease;
+}
+
+.top-menu .logo span {
+    font-size: 20px;
+    margin-left: 20px;
+    display: none;
+}
+
+.top-menu .toggle {
+    width: 30px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.top-menu .toggle i {
+    font-size: 35px;
+}
+
+/* ENLACES MENU */
+
+main{
+    display: flex;
+    height: 100%;
+}
+
+.menu{
+    height: 472px;
+}
+
+.menu .enlace {
+    height: 8px;
+    padding: 20px 0 20px 17px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    cursor: pointer;
+    font-size: 20px;
+    transition: all .3s ease;
+}
+
+.menu .enlace:hover {
+    background: var(--azul-opacidad);
+}
+
+.menu .enlace i {
+    margin-right: 20px;
+    font-size: 25px;
+}
+
+.menu .enlace span {
+    opacity: 0;
+    transition: opacity .3s ease;
+}
+
+.menu-dashboard.open {
+    max-width: 280px;
+}
+
+.menu-dashboard.open .top-menu .logo span {
+    display: block;
+}
+
+.menu-dashboard.open .input-search
+.menu-dashboard.open .menu .enlace {
+    width: auto;
+}
+
+.menu-dashboard.open .input-search .input {
+    display: block;
+}
+
+.menu-dashboard.open .menu .enlace {
+    padding: 20px;
+}
+
+.menu-dashboard.open .menu .enlace span {
+    opacity: 1;
+}
+
+
+/* Para Encabezado */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;800&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito', sans-serif;
+    font-size: 20px;
+}
+
+
+.header{
+    background-color: #1b3039;
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    align-items: center;
+    height: 85px;
+    padding: 5px 2%;
+}
+
+.header .logo{
+    cursor: pointer;
+    order: 3;
+    margin-left: auto;
+}
+
+.header .logo img{
+    height: 70px;
+    width: auto;
+    transition: all 0.3s;
+}
+
+
+.header nav{
+    order: 1;
+}
+
+.header .nav-links{
+    list-style: none;
+}
+
+.header .nav-links li{
+    display: inline-block;
+    padding: 0 20px;    
+}
+
+.header .nav-links li:nth-child(1){
+    padding: 0 20px 0 0;
+}
+
+
+.header .nav-links a{
+    font-size: 700;
+    color: #eceff1;
+    text-decoration: none;    
+}
+.section-1 {
+	width: 100%;
+	background-size: cover;
+	background-position: center;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-direction: column;
+}
+/*Formulario-Registro productos*/
+.form .input-box {
+	width: 100%;
+	margin-top: 20px;
+	background-color: rgba(216, 38, 38, 0.5);
+}
+.form-select{
+	
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+	background-color: #262931;
+	color: rgb(255, 255, 255);
+	font-size: 15px;
+}
+label[for="foto"] {
+	display: flex;
+	font-size: 15px;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+}
+.input-box label {
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	color: #ffffff;
+}
+
+.input-box input:focus {
+	box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+}
+.Titu{
+    color: #333;
+    font-size: 30px;
+    padding: 10px;
+}
+.form .column {
+	display: flex;
+	column-gap: 15px;
+}
+.form .Categoria-box {
+	margin-top: 20px;
+}
+.Categoria-box h3 {
+	color: #333;
+	font-size: 1rem;
+	font-weight: 400;
+	margin-bottom: 8px;
+}
+.form :where(.Categoria-option, .Categoria) {
+	display: flex;
+	align-items: center;
+	column-gap: 50px;
+	flex-wrap: wrap;
+}
+.form .Categoria {
+	column-gap: 5px;
+}
+
+.form :where(.Categoria input, .Categoria label) {
+	cursor: pointer;
+}
+.gender label {
+    text-align: right;
+	color: #707070;
+}
+.address :where(input, .select-box) {
+	margin-top: 15px;
+}
+.select-box select {
+	height: 100%;
+	width: 100%;
+	outline: none;
+	border: none;
+	color: #707070;
+	font-size: 1rem;
+}
+form>div {
+	margin-bottom: 20px;
+	display: flex;
+	flex-direction: column;
+	gap: 3px;
+}
+form img {
+	width: 200px;
+	border: 50%;
+	border: 6px solid #AAA;
+}
+
+form input[type=file] {
+	display: none;
+}
+
+form input[type=file] {
+	background: #accdd8;
+	color: white;
+	padding: 6px 20px;
+	cursor: pointer;
+	border-radius: 3px;
+}
+
+form input {
+	padding: 8px 20px;
+	border: 1px solid #AAA;
+	border-radius: 3px;
+}
+
+form button {
+	padding: 5px;
+	justify-content: center;
+	cursor: pointer;
+	transition: all 0.2s ease;
+    background-color: #1b3039;
+	color: #fff;
+}
+.card--container{
+	background:#161313;
+	padding: 2rem;
+	border-radius: 10px;
+}
+/*Responsive*/
+@media screen and (max-width: 500px) {
+	.form .column {
+		flex-wrap: wrap;
+	}
+
+	.form :where(.Categoria-option, .Categoria) {
+		row-gap: 15px;
+	}
+}
+.imput-box {
+	display: flex;
+	flex-wrap: wrap;
+	width: 50%;
+	padding-bottom: 15px;
+}
+.section-1 h1 {
+	color: #fff;
+	font-size: 60px;
+}
+
+.section-1 p {
+	color: #127b8e;
+	font-size: 20px;
+	background: #fff;
+	padding: 10px;
+	border-radius: 1px;
+}
+/*Tabla*/
+table thead tr {
+	background-color: #262931;
+	color: #ffffff;
+	text-align: center;
+}
+table th,
+table td {
+	padding: 12px 15px;
+
+}
+table td button{
+	background-color: #262931;
+	color: #fff;
+	font-size: 15px;
+}
+table tbody tr {
+	border-bottom: 1px solid #dddddd;
+    background-color: #1b3039;
+	text-align: center;
+}
+.attendance{
+	margin-top: 20px;
+	text-transform: capitalize;
+  }
+  .attendance-list{
+	width: 100%;
+	padding: 10px;
+	margin-top: 10px;
+	background-color: #161313;
+	border-radius: 10px;
+	box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+  }
+  .table{
+	border-collapse: collapse;
+	margin: 25px 0;
+	font-size: 15px;
+	min-width: 100%;
+	overflow: hidden;
+	border-radius: 5px 5px 0 0;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+

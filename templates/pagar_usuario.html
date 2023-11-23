@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+
+    <script src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script>
+
+
+    <link rel="stylesheet" href="/css/estilos_inicio.css">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/style.css">
+
+    <link rel="stylesheet" href="/css/estilos_inicio.min.css">
+    <link rel="stylesheet" href="/css/estilos_tarjeta.css">
+    <link rel="icon" href="/images/logo-cine.ico">
+    <title>Cine Sp4cex</title>
+
+    <title>Trabaja Con Nosotros</title>
+</head>
+<body>
+    <!-- trabaja modal de inicio de sesion -->
+    <header>
+      <a href="inicio.html"><img src="/images/logo.png" alt=""></a>
+      <h1>Cine Sp4cex</h1>
+        <nav>
+          <ul>
+            <li><a class="desplazar" href="inicio.html">Inicio</a></li>
+            <li><a class="desplazar" href="#pelicula">Peliculas</a></li>
+            <li><a class="desplazar" href="nosotros.html">Nosotros</a></li>
+            <li><a href="/templates/promociones.html">Promociones</a></li>
+            <!-- Nos llevara al inicio de sesion -->
+            <a href="login.html">
+              <li class="boton-modal"><label for="btn-modal"><i class="bi bi-person-fill" style="font-size: 25px;"></i></label>
+          </a> 
+        </li>
+          </ul>
+        </nav>
+    </header>
+
+    <div class="containerr">
+
+        <div class="card-container">
+   
+           <div class="front">
+               <div class="image">
+                   <img src="/images/chip.png" alt="">
+                   <img src="/images/visas.png" alt="" width="110" height="150">
+               </div>
+               <div class="card-number-box">###############</div>
+               <div class="flexbox">
+                   <div class="box">
+                       <span>NOMBRE DEL TITULAR</span>
+                       <div class="card-holder-name">Nombres y apellidos</div>
+                   </div>
+                   <div class="box">
+                       <span>expires</span>
+                       <div class="expiration">
+                           <span class="exp-month">mm</span>
+                           <span class="exp-year">yy</span>
+                       </div>
+                   </div>
+               </div>
+           </div>
+   
+           <div class="back">
+               <div class="stripe"></div>
+               <div class="box">
+                   <span>cvv</span>
+                   <div class="cvv-box"></div>
+                   <img src="/images/visa.png" alt="">
+               </div>
+           </div>
+   
+       </div>
+   
+       <form action="">
+           <div class="inputBox">
+               <span>Numero de tarjeta débito o crédito</span>
+               <input type="text" maxlength="16" class="card-number-input" placeholder="Ingresa un número" inputmode="numeric" required>
+           </div>
+           <div class="inputBox">
+               <span>Nombre del titular de la tarjeta</span>
+               <input type="text" class="card-holder-input" required>
+           </div>
+           <div class="flexbox">
+               <div class="inputBox" required>
+                   <span>mm / Expiración</span>
+                   <select name="" id="" class="month-input">
+                       <option value="month" selected disabled>Mes</option>
+                       <option value="01">01</option>
+                       <option value="02">02</option>
+                       <option value="03">03</option>
+                       <option value="04">04</option>
+                       <option value="05">05</option>
+                       <option value="06">06</option>
+                       <option value="07">07</option>
+                       <option value="08">08</option>
+                       <option value="09">09</option>
+                       <option value="10">10</option>
+                       <option value="11">11</option>
+                       <option value="12">12</option>
+                   </select>
+               </div>
+               <div class="inputBox" required>
+                   <span>yy / Expiración</span>
+                   <select name="" id="" class="year-input">
+                       <option value="year" selected disabled>Año</option>
+                       <option value="2021">2021</option>
+                       <option value="2022">2022</option>
+                       <option value="2023">2023</option>
+                       <option value="2024">2024</option>
+                       <option value="2025">2025</option>
+                       <option value="2026">2026</option>
+                       <option value="2027">2027</option>
+                       <option value="2028">2028</option>
+                       <option value="2029">2029</option>
+                       <option value="2030">2030</option>
+                   </select>
+               </div>
+               <div class="inputBox">
+                   <span>cvv</span>
+                   <input type="text" maxlength="4" class="cvv-input" required>
+               </div>
+           </div>
+           
+           <!-- Button trigger modal -->
+           <a id="btnPagar" href="#" class="Pagar-btn" style="position: absolute; width: 550px" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+            Pagar
+        </a>
+       </form>
+     </div>    
+      <script src="/js/script_tarjeta.js"></script>  
+
+  <!--Footer-->
+  <div id="footer" class="footer" >
+    <div class="grupo-1">
+        <img src="/images/logo cine.png" alt="cine" width="350px">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rowdies&display=swap">
+
+        <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
+
+        <div class="box">
+            <h2 style="font-family: 'Dela Gothic One';">SOBRE NOSOTROS</h2>
+
+            <a href="#estd" style="color: white; font-family: 'Rowdies', sans-serif;">Contactanos</a>
+            <br>
+            <a th:href="@{/nosotros}" style="color: white; font-family: 'Rowdies', sans-serif;">Trabaja con Nosotros</a>
+            <br>
+            <a href="#estd" style="color: white; font-family: 'Rowdies', sans-serif;">Atención al cliente</a>
+            <br>
+            <a href="#estd" style="color: white; font-family: 'Rowdies', sans-serif;">Copia de entrada</a>
+            <br>
+            <a href="#estd" style="color: white; font-family: 'Rowdies', sans-serif;">Ver lista de productos permitidos</a>
+            <br>
+            <a href="#estd" style="color: white; font-family: 'Rowdies', sans-serif;">Politica SP4CEX®</a>
+
+            <br>
+             <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+            <br>
+            <a href="#" class="btn btn-4"><img src="/images/libro.png" alt="Libro de Reclamaciones" width="40" height="35">
+            Libro de Reclamaciones</a>
+
+            <!-- Enlace al archivo jQuery (puedes incluirlo en tu proyecto o usar una CDN) -->
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+            
+            <!-- Enlace al archivo Popper.js (puedes incluirlo en tu proyecto o usar una CDN) -->
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+            
+            <!-- Enlace al archivo JavaScript de Bootstrap (puedes incluirlo en tu proyecto o usar una CDN) -->
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+            <br/>
+            
+        </div>
+        <div class="box">
+            <h2 style="font-family: 'Dela Gothic One';">SIGUENOS</h2>
+            <div class="red-social">
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-instagram"></a>
+                <a href="#" class="fa fa-youtube"></a>
+                <a href="#" class="fa fa-twitter"></a>
+
+            </div>
+        </div>
+    </div>
+        <div class="grupo-2">
+            <small>&copy; 2023 <b>CINE SP4CEX®</b> - Todos los Derechos Reservados. </small>
+        </div>
+    </div>
+<script src="/js/script.js"></script>
+<script>
+    document.getElementById('btnPagar').addEventListener('click', function(event) {
+        // Obtener los valores de los campos del formulario
+        var cardNumber = document.querySelector('.card-number-input').value;
+        var cardHolder = document.querySelector('.card-holder-input').value;
+        var month = document.querySelector('.month-input').value;
+        var year = document.querySelector('.year-input').value;
+        var cvv = document.querySelector('.cvv-input').value;
+
+        // Verificar si los campos están llenos
+        if (!cardNumber || !cardHolder || !month || !year || !cvv) {
+            // Si algún campo está vacío, prevenir el evento de clic y mostrar un mensaje de alerta
+            event.preventDefault();
+            alert('Por favor, complete todos los campos del formulario antes de proceder al pago.');
+        } else {
+            // Si todos los campos están llenos, redirigir a la página de pago
+            window.location.href = '/templates/inicio.html'; // Cambia la URL según tu estructura de archivos
+        }
+    });
+</script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- start: Icons -->
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+        <!-- start: Icons -->
+        <!-- start: CSS -->
+        <link rel="stylesheet" href="/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/css/style1up.css">
+        <link rel="stylesheet" href="/css/style2up.css">
+        <!-- end: CSS -->
+        <link rel="icon" href="/images/logo-cine.ico">
+        <title>Cine</title>
+    </head>
+
+    <body>
+
+        <!-- start: Sidebar -->
+        <div class="sidebar position-fixed top-0 bottom-0 bg-white border-end">
+            <div class="d-flex align-items-center p-3">
+                <a href="#" class="sidebar-logo text-uppercase fw-bold text-decoration-none text-indigo fs-4">Cine Sp4cex</a>
+                <i class="sidebar-toggle ri-arrow-left-circle-line ms-auto fs-5 d-none d-md-block"></i>
+            </div>
+            <ul class="sidebar-menu p-3 m-0 mb-0" >
+                <li class="sidebar-menu-item active">
+                    <a href="dashboard.html">
+                        <i class="ri-dashboard-line sidebar-menu-item-icon"></i>
+                        Dashboard
+                    </a>
+                </li>
+                <li class="sidebar-menu-divider mt-3 mb-1 text-uppercase">Menú</li>
+                <li class="sidebar-menu-item has-dropdown">
+                    <a href="#">
+                        <i class="ri-pages-line sidebar-menu-item-icon"></i>
+                        Personal
+                        <i class="ri-arrow-down-s-line sidebar-menu-item-accordion ms-auto"></i>
+                    </a>
+                    <ul class="sidebar-dropdown-menu">
+                        <li class="sidebar-dropdown-menu-item">
+                            <a href="/templates/usuario.html">
+                                Usuarios
+                            </a>
+                        </li>
+                        <li class="sidebar-dropdown-menu-item">
+                            <a href="crudempleados.html">
+                                Trabajadores
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="sidebar-menu-item has-dropdown">
+                    <a href="#">
+                        <i class="ri-user-line sidebar-menu-item-icon"></i>
+                        Funciones
+                        <i class="ri-arrow-down-s-line sidebar-menu-item-accordion ms-auto"></i>
+                    </a>
+                    <ul class="sidebar-dropdown-menu">
+                        <li class="sidebar-dropdown-menu-item">
+                            <a href="dulceria_admin.html">
+                                Dulceria
+                            </a>
+                        </li>
+                        <li class="sidebar-dropdown-menu-item">
+                            <a href="promociones_admi.html">
+                                Promociones
+                            </a>
+                        </li>
+                        <li class="sidebar-dropdown-menu-item">
+                            <a href="cartelera.html">
+                                Cartelera
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="sidebar-menu-item has-dropdown">
+                    <a href="#">
+                        <i class="ri-shopping-cart-2-line sidebar-menu-item-icon"></i>
+                        Analisis
+                        <i class="ri-arrow-down-s-line sidebar-menu-item-accordion ms-auto"></i>
+                    </a>
+                    <ul class="sidebar-dropdown-menu">
+                        <li class="sidebar-dropdown-menu-item has-dropdown">
+                            <a href="#">
+                                Ingresos
+                                <i class="ri-arrow-down-s-line sidebar-menu-item-accordion ms-auto"></i>
+                            </a>
+                            <ul class="sidebar-dropdown-menu">
+                                <li class="sidebar-dropdown-menu-item">
+                                    <a href="/templates/IngresoDulceria.html">
+                                        Ingreso Dulceria
+                                    </a>
+                                </li>
+
+                                <li class="sidebar-dropdown-menu-item">
+                                    <a href="/templates/IngresosEntradas.html">
+                                        Ingreso Entradas
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="sidebar-dropdown-menu-item">
+                            <a href="foro_admin.html">
+                                Foro
+                            </a>
+                        </li>
+                        <li class="sidebar-dropdown-menu-item has-dropdown">
+                            <a href="/templates/RecursosHum.html">
+                                Recursos Humanos
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="sidebar-overlay"></div>
+        <!-- end: Sidebar -->
+
+        <!-- start: Main -->
+        <main class="bg-light">
+            <div class="p-2">
+                <!-- start: Navbar -->
+                <nav class="px-3 py-2 bg-white rounded shadow" >
+                    <i class="ri-menu-line sidebar-toggle me-3 d-block d-md-none"></i>
+                    <h5 class="fw-bold mb-0 me-auto" >Dashboard</h5>
+                    <div class="dropdown me-3 d-none d-sm-block">
+                        <div class="cursor-pointer dropdown-toggle navbar-link" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <i class="ri-notification-line"></i>
+                        </div>
+                        <div class="dropdown-menu fx-dropdown-menu">
+                            <h5 class="p-3 bg-indigo text-light">Notification</h5>
+                            <div class="list-group list-group-flush">
+                                <a href="#"
+                                    class="list-group-item list-group-item-action d-flex justify-content-between align-items-start">
+                                    <div class="me-auto">
+                                        <div class="fw-semibold">Productos</div>
+                                        <span class="fs-7">Content for list item</span>
+                                    </div>
+                                    <span class="badge bg-primary rounded-pill">14</span>
+                                </a>
+                                <a href="#"
+                                    class="list-group-item list-group-item-action d-flex justify-content-between align-items-start">
+                                    <div class="me-auto">
+                                        <div class="fw-semibold">Clientes</div>
+                                        <span class="fs-7">Content for list item</span>
+                                    </div>
+                                    <span class="badge bg-primary rounded-pill">14</span>
+                                </a>
+                                <a href="#"
+                                    class="list-group-item list-group-item-action d-flex justify-content-between align-items-start">
+                                    <div class="me-auto">
+                                        <div class="fw-semibold">Empleados</div>
+                                        <span class="fs-7">Content for list item</span>
+                                    </div>
+                                    <span class="badge bg-primary rounded-pill">14</span>
+                                </a>
+                                <a href="#"
+                                    class="list-group-item list-group-item-action d-flex justify-content-between align-items-start">
+                                    <div class="me-auto">
+                                        <div class="fw-semibold">Promociones</div>
+                                        <span class="fs-7">Content for list item</span>
+                                    </div>
+                                    <span class="badge bg-primary rounded-pill">14</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <div class="d-flex align-items-center cursor-pointer dropdown-toggle" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <span class="me-2 d-none d-sm-block">John Doe</span>
+                            <i class="ri-arrow-down-s-line sidebar-menu-item-accordion ms-auto"></i>
+                            <img class="navbar-profile-image"
+                                src="/images/uwu.jpg"
+                                alt="Image">
+                        </div>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                            <li><a class="dropdown-item" href="login.html">Salir</a></li>
+                        </ul>
+                    </div>
+                </nav>
+                <!-- end: Navbar -->
+
+                <!-- start: Content -->
+                <div class="py-4">
+                    <!-- start: Summary -->
+                    <div class="row g-3">
+                        <div class="col-12 col-sm-6 col-lg-3">
+                            <a href="#"
+                               class="text-dark text-decoration-none bg-white p-3 rounded shadow-sm d-flex justify-content-between summary-primary">
+                                <div>
+                                    <i class="ri-shopping-cart-2-line summary-icon bg-primary mb-2"></i>
+                                    <div>Cant. Entradas Vendidas</div>
+                                </div>
+                                <h4>3,500</h4>
+                            </a>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-3">
+                            <a href="#"
+                               class="text-dark text-decoration-none bg-white p-3 rounded shadow-sm d-flex justify-content-between summary-indigo">
+                                <div>
+                                    <i class="ri-shopping-cart-2-line summary-icon bg-indigo mb-2"></i>
+                                    <div>Entradas Vendidas</div>
+                                </div>
+                                <h4>S/42,000</h4>
+                            </a>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-3">
+                            <a href="#"
+                               class="text-dark text-decoration-none bg-white p-3 rounded shadow-sm d-flex justify-content-between summary-danger">
+
+                                <div>
+                                    <i class="ri-shopping-cart-2-line summary-icon bg-danger mb-2"></i>
+                                    <div>Gastos en Insumos</div>
+                                </div>
+                                <h4>S/5,500</h4>
+                            </a>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-3">
+                            <a href="#"
+                               class="text-dark text-decoration-none bg-white p-3 rounded shadow-sm d-flex justify-content-between summary-success">
+                                <div>
+                                    <i class="ri-shopping-cart-2-line summary-icon bg-success mb-2"></i>
+                                    <div>Ingresos Diarios</div>
+                                </div>
+                                <h4>S/64,000</h4>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- end: Summary -->
+                    <!-- start: Graph -->
+                    <div class="row g-3 mt-2">
+                        <div class="col-12 col-md-7 col-xl-8">
+                            <div class="card border-0 shadow-sm h-100">
+                                <div class="card-header bg-white">
+                                    Aforo
+                                </div>
+                                <div class="card-body">
+                                    <canvas id="sales-chart"></canvas>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carta2">
+                            <p class="title">Nuevos Usuarios</p>
+                            <div class="user__container">
+                                <div class="user">
+                                    <img class="image"
+                                         src="https://images.wikidexcdn.net/mwuploads/wikidex/thumb/3/32/latest/20230614194705/Psyduck.png/800px-Psyduck.png"></img>
+                                    <div class="user__content">
+                                        <div class="text">
+                                            <span class="name">Sebastian Necioput</span>
+                                            <p class="username">Hace 35 min</p>
+                                        </div>
+                                        <button class="follow">Editar</button>
+                                    </div>
+                                </div>
+                                <div class="user">
+                                    <img class="image"
+                                         src="https://abcnoticias.mx/u/fotografias/m/2021/6/29/f638x638-139207_197374_5050.png"></img>
+                                    <div class="user__content">
+                                        <div class="text">
+                                            <span class="name">Perrito Panzon</span>
+                                            <p class="username">Hace 55 min</p>
+                                        </div>
+                                        <button class="follow">Editar</button>
+                                    </div>
+                                </div>
+                                <div class="user">
+                                    <img class="image"
+                                         src="data:image/jpeg;base64,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"></img>
+                                    <div class="user__content">
+                                        <div class="text">
+                                            <span class="name">Julio Kachamu Ebles</span>
+                                            <p class="username">Hace 2 Hor</p>
+                                        </div>
+                                        <button class="follow">Editar</button>
+                                    </div>
+                                </div>
+                                <div class="user">
+                                    <img class="image"
+                                         src="https://i.blogs.es/242594/dragon-ball-super-ultra-instinto-cinco-anos/840_560.jpeg"></img>
+                                    <div class="user__content">
+                                        <div class="text">
+                                            <span class="name">Tapia Gonzales</span>
+                                            <p class="username">Hace 3 Hor</p>
+                                        </div>
+                                        <button class="follow">Editar</button>
+                                    </div>
+                                </div>
+                                <div class="user">
+                                    <img class="image"
+                                         src="https://i.pinimg.com/1200x/09/eb/46/09eb46729a7b3576a79c10d0e7658bc3.jpg"></img>
+                                    <div class="user__content">
+                                        <div class="text">
+                                            <span class="name">Luis Peluca</span>
+                                            <p class="username">Hace 3 Hor</p>
+                                        </div>
+                                        <button class="follow">Editar</button>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- end: Graph -->
+                </div>
+                <!-- end: Content -->
+            </div>
+        </main>
+        <!-- end: Main -->
+
+<!-- start: JS -->
+<script src="/js/jquery.min.js"></script>
+<script src="/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.8.0/chart.min.js" integrity="sha512-sW/w8s4RWTdFFSduOTGtk4isV1+190E/GghVffMA9XczdJ2MDzSzLEubKAs5h0wzgSJOQTRYyaz73L3d6RtJSg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="/js/script.js"></script>
+
+<!-- end: JS -->
+
+
+    </body>
+</html>

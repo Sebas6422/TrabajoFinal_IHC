@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="logo-cine.ico">
+    <title>Cine Sp4cex</title>
+    <!-- BOX ICONS -->
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" href="ccs/reset.css">
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/estilos2.css">
+    <link rel="stylesheet" href="css/style4.css">
+    <link rel="icon" href="/images/logo-cine.ico">
+    <script src="js/app.js" defer></script>
+</head>
+<body>
+    <style>
+        /* Estilos para el informe de contratación */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+}
+
+.postulantes h1 {
+    text-align: center;
+    margin-top: 20px;
+    color:darkslategray;
+    font-size: 40px;
+}
+
+.postulantes table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: #525151;
+    border: 2px solid #ff7206; /* Borde de la tabla */
+}
+
+.postulantes table, th, td {
+    border: 1px solid #ccc;
+}
+
+.postulantes th, td {
+    padding: 10px;
+    text-align: center;
+}
+
+.postulantes thead {
+    background-color: #ff006a;
+    color: #fff;
+}
+
+.postulantes tr:nth-child(even) {
+    background-color: #575656;
+}
+
+.postulantes select {
+    width: 100%;
+    padding: 5px;
+}
+
+/* Estilo para los checkboxes */
+.postulantes input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    margin: 0;
+}
+
+    </style>
+    
+<!-- Encabezado Dashboard -->
+
+
+        <div th:replace="menu :: #menu-dashboard"></div>
+
+
+        <div style="margin-left: 17rem;">
+
+            <div class="postulantes">
+                <h1>Informe de Procesos de Contratación</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre del Candidato</th>
+                        <th>Área Postulada</th>
+                        <th>Entrevista</th>
+                        <th>Entregó su CV</th>
+                        <th>Carnet de Sanidad</th>
+                        <th>Antecedentes Policiales</th>
+                        <th>Entregó Otros Datos</th>
+                        <th>Resultado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Angelo Lozano</td>
+                        <td>Seguridad</td>
+                        <td><input type="checkbox" id="entrevista1" checked></td>
+                        <td><input type="checkbox" id="cv1" checked></td>
+                        <td><input type="checkbox" id="carnet1" checked></td>
+                        <td><input type="checkbox" id="antecedentes1" checked></td>
+                        <td>
+                            <select id="otrosDatos1">
+                                <option value="si">Si</option>
+                                <option value="no">No</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select id="resultado1">
+                                <option value="aceptado">Aceptado</option>
+                                <option value="aceptado">En proceso</option>
+                                <option value="rechazado">Rechazado</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Fabian Soca</td>
+                        <td>Boleteria</td>
+                        <td><input type="checkbox" id="entrevista2" checked></td>
+                        <td><input type="checkbox" id="cv2" checked></td>
+                        <td><input type="checkbox" id="carnet2"></td>
+                        <td><input type="checkbox" id="antecedentes2"></td>
+                        <td>
+                            <select id="otrosDatos2">
+                                <option value="si">Si</option>
+                                <option value="no">No</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select id="resultado2">
+                                <option value="aceptado">Aceptado</option>
+                                <option value="aceptado" selected>En proceso</option>
+                                <option value="rechazado">Rechazado</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Roger Ñoclito</td>
+                        <td>Cajas</td>
+                        <td><input type="checkbox" id="entrevista3" ></td>
+                        <td><input type="checkbox" id="cv3"></td>
+                        <td><input type="checkbox" id="carnet3"></td>
+                        <td><input type="checkbox" id="antecedentes3"></td>
+                        <td>
+                            <select id="otrosDatos3">
+                                <option value="si">Si</option>
+                                <option value="no" selected>No</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select id="resultado3">
+                                <option value="">Aceptado</option>
+                                <option value="">En proceso</option>
+                                <option value="rechazado" selected>Rechazado</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <td>Julio Cuba</td>
+                    <td>Supervisor</td>
+                    <td><input type="checkbox" id="entrevista2" checked></td>
+                    <td><input type="checkbox" id="cv2"></td>
+                    <td><input type="checkbox" id="carnet2" checked></td>
+                    <td><input type="checkbox" id="antecedentes2"></td>
+                    <td>
+                        <select id="otrosDatos2">
+                            <option value="si" selected>Si</option>
+                            <option value="no">No</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select id="resultado2">
+                            <option value="aceptado">Aceptado</option>
+                            <option value="aceptado" selected>En proceso</option>
+                            <option value="rechazado">Rechazado</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Aldair de la cruz</td>
+                    <td>Boleteria</td>
+                    <td><input type="checkbox" id="entrevista2"></td>
+                    <td><input type="checkbox" id="cv2"></td>
+                    <td><input type="checkbox" id="carnet2" checked></td>
+                    <td><input type="checkbox" id="antecedentes2" checked></td>
+                    <td>
+                        <select id="otrosDatos2">
+                            <option value="si">Si</option>
+                            <option value="no">No</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select id="resultado2">
+                            <option value="aceptado">Aceptado</option>
+                            <option value="aceptado" selected>En proceso</option>
+                            <option value="rechazado">Rechazado</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ivan Quezada</td>
+                    <td>Pgc</td>
+                    <td><input type="checkbox" id="entrevista2" checked></td>
+                    <td><input type="checkbox" id="cv2" checked></td>
+                    <td><input type="checkbox" id="carnet2" checked></td>
+                    <td><input type="checkbox" id="antecedentes2"></td>
+                    <td>
+                        <select id="otrosDatos2">
+                            <option value="si" selected>Si</option>
+                            <option value="no">No</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select id="resultado2">
+                            <option value="aceptado">Aceptado</option>
+                            <option value="aceptado" selected>En proceso</option>
+                            <option value="rechazado">Rechazado</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Sebastian Neciosup</td>
+                    <td>Administrador</td>
+                    <td><input type="checkbox" id="entrevista2" checked></td>
+                    <td><input type="checkbox" id="cv2" checked></td>
+                    <td><input type="checkbox" id="carnet2"></td>
+                    <td><input type="checkbox" id="antecedentes2" checked></td>
+                    <td>
+                        <select id="otrosDatos2">
+                            <option value="si">Si</option>
+                            <option value="no" selected>No</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select id="resultado2">
+                            <option value="aceptado">Aceptado</option>
+                            <option value="aceptado">En proceso</option>
+                            <option value="rechazado"select>Rechazado</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Jade Ismiño</td>
+                    <td>Publicidad</td>
+                    <td><input type="checkbox" id="entrevista2" checked></td>
+                    <td><input type="checkbox" id="cv2" checked></td>
+                    <td><input type="checkbox" id="carnet2" checked></td>
+                    <td><input type="checkbox" id="antecedentes2" checked></td>
+                    <td>
+                        <select id="otrosDatos2">
+                            <option value="si" selected>Si</option>
+                            <option value="no">No</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select id="resultado2">
+                            <option value="aceptado"select>Aceptado</option>
+                            <option value="aceptado">En proceso</option>
+                            <option value="rechazado">Rechazado</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                </tbody>
+            </table>
+            </div>
+            
+            <script src="script.js"></script>
+        </div>
+</body>
+</html>

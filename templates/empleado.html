@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="logo-cine.ico">
+        <title>Cine Sp4cex</title>
+        <link rel="stylesheet" href="ccs/reset.css">
+
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="stylesheet" href="css/estilos.css">
+        <link rel="stylesheet" href="css/estilos2.css">
+        <link rel="stylesheet" href="css/style4.css">
+        <link rel="icon" href="/images/logo-cine.ico">
+        <script src="js/app.js" defer></script>
+    </head>
+
+    <body>
+
+        <style>
+            /* FONTS GOOGLE */
+            @import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
+            /* VARIABLES */
+
+            * {
+                padding: 0;
+                margin: 0;
+                list-style: none;
+                box-sizing: border-box;
+                border: none;
+                outline: none;
+                box-sizing: border-box;
+            }
+
+            :root {
+                --blanco: #E0E0E0;
+                --azul-opacidad: #184463;
+                --bg-menu: #003053;
+                --bg-body: #C7E1FF;
+            }
+
+            /* GENERALES */
+
+
+            .imgop {
+                filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(68deg) brightness(97%) contrast(108%);
+            }
+
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                font-family: 'Quicksand', sans-serif;
+                color: var(--blanco);
+            }
+
+            /* LAYOUT */
+
+            .menu-dashboard {
+                max-width: 150px;
+                height: 100;
+                background: var(--bg-menu);
+                padding: 20px;
+                transition: max-width .3s ease;
+            }
+
+            .top-menu {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+
+            .top-menu .logo {
+                display: flex;
+                align-items: center;
+            }
+
+            .top-menu .logo img {
+                width: 40px;
+                transition: width .3s ease;
+            }
+
+            .top-menu .logo span {
+                font-size: 20px;
+                margin-left: 20px;
+                display: none;
+            }
+
+            .top-menu .toggle {
+                width: 30px;
+                height: 20px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                cursor: pointer;
+            }
+
+            .top-menu .toggle i {
+                font-size: 35px;
+            }
+
+            /* INPUT BOX */
+
+            .input-search {
+                width: 100%;
+                margin: 50px 0;
+                background-color: var(--azul-opacidad);
+                padding: 15px;
+                border-radius: 8px;
+                display: flex;
+                align-items: center;
+            }
+
+            .input-search i {
+                font-size: 30px;
+                margin-right: 20px;
+            }
+
+            .input-search .input {
+                border: none;
+                outline: none;
+                background-color: transparent;
+                width: 100%;
+                height: 30px;
+                color: var(--blanco);
+                font-size: 22px;
+                display: none;
+            }
+
+            /* ENLACES MENU */
+
+            .menu {
+                height: 472px;
+            }
+
+            .menu .btn-salir {
+                text-decoration: none;
+                color: white;
+            }
+
+            .menu .enlace {
+                height: 8px;
+                padding: 20px 0 20px 17px;
+                border-radius: 8px;
+                display: flex;
+                align-items: center;
+                margin-bottom: 20px;
+                cursor: pointer;
+                font-size: 20px;
+                transition: all .3s ease;
+            }
+
+            .menu .enlace:hover {
+                background: var(--azul-opacidad);
+            }
+
+            .menu .enlace i {
+                margin-right: 20px;
+                font-size: 25px;
+            }
+
+            .menu .enlace span {
+                opacity: 0;
+                transition: opacity .3s ease;
+            }
+
+            .menu-dashboard.open {
+                max-width: 280px;
+            }
+
+            .menu-dashboard.open .top-menu .logo span {
+                display: block;
+            }
+
+            .menu-dashboard.open .input-search .menu-dashboard.open .menu .enlace {
+                width: auto;
+            }
+
+            .menu-dashboard.open .input-search .input {
+                display: block;
+            }
+
+            .menu-dashboard.open .menu .enlace {
+                padding: 20px;
+            }
+
+            .menu-dashboard.open .menu .enlace span {
+                opacity: 1;
+            }
+
+
+            /* Para Encabezado */
+            @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;800&display=swap');
+
+            * {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+                font-family: 'Nunito', sans-serif;
+                font-size: 20px;
+            }
+
+            body {
+                background-color: #fff59d;
+            }
+
+            .header {
+                background-color: #1b3039;
+                display: flex;
+                width: 100%;
+                justify-content: flex-end;
+                align-items: center;
+                height: 85px;
+                padding: 5px 2%;
+            }
+
+            .header .logo {
+                cursor: pointer;
+                order: 3;
+                margin-left: auto;
+            }
+
+            .header .logo img {
+                height: 70px;
+                width: auto;
+                transition: all 0.3s;
+            }
+
+
+            .header nav {
+                order: 1;
+            }
+
+            .header .nav-links {
+                list-style: none;
+            }
+
+            .header .nav-links li {
+                display: inline-block;
+                padding: 0 20px;
+            }
+
+            .header .nav-links li:nth-child(1) {
+                padding: 0 20px 0 0;
+            }
+
+
+            .header .nav-links a {
+                font-size: 700;
+                color: #eceff1;
+                text-decoration: none;
+            }
+
+
+            @media (max-width: 952px) {}
+
+            @media (max-width: 858px) {}
+
+
+
+
+
+
+            .avisos {
+                display: grid;
+            }
+
+            .avisos .cards {
+                display: flex;
+            }
+
+            .avisos .card {
+                color: white;
+                display: grid;
+                margin: 20px;
+                width: 300px;
+                height: 200px;
+                border-radius: 7px;
+                background-color: #003053;
+            }
+
+            .avisos .card .card-body {
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                height: 150px;
+                background-color: #52769e;
+                padding: 20px;
+            }
+
+            .avisos .card .card-body h1 {
+                font-size: 40px;
+                width: 100%;
+                text-align: left;
+            }
+
+            .avisos .card .card-body h3 {
+                font-size: 20px;
+            }
+
+            .avisos .card .card-footer {
+                position: relative;
+                bottom: 3px;
+            }
+
+            .avisos .card .card-footer .card-link {
+                color: white;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-decoration: none;
+            }
+
+            .avisos .card .card-footer .card-link {
+                color: white;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-decoration: none;
+                transition: .5s;
+            }
+
+
+            .avisos .card .card-footer .card-link:hover {
+                font-size: 20px;
+                color: #fff59d;
+            }
+
+
+
+
+
+
+
+
+            .cronograma {
+                color: black;
+                background-color: rgba(255, 245, 157, 0.5);
+                overflow-x: auto;
+            }
+
+            .cronograma table {
+                width: 100%;
+                margin: 20px;
+            }
+
+            .cronograma table th {
+                position: sticky;
+                top: 0;
+                height: 10px;
+            }
+
+            .cronograma table .titulos {
+                background-color: #184463;
+            }
+
+            .cronograma table,
+            .cronograma th,
+            .cronograma td {
+                border: 1px solid black;
+                border-collapse: separate
+            }
+
+            .cronograma th,
+            td {
+                padding: 10px;
+            }
+
+
+
+
+            .cronograma-registro {
+                color: black;
+                background-color: rgba(255, 245, 157, 0.5);
+                overflow-x: auto;
+            }
+
+            .cronograma-registro table {
+                width: 100%;
+                margin: 20px;
+            }
+
+            .cronograma-registro table th {
+                position: sticky;
+                top: 0;
+                height: 10px;
+            }
+
+            .cronograma-registro table .titulos {
+                background-color: #184463;
+            }
+
+            .cronograma-registro table,
+            .cronograma th,
+            .cronograma td {
+                border: 1px solid black;
+                border-collapse: separate
+            }
+
+            .cronograma-registro th,
+            td {
+                padding: 10px;
+            }
+
+
+            /* REGISTRO DE EMPLEADO */
+            .form-register {
+                width: 400px;
+                background: #24303c;
+                padding: 30px;
+                margin: auto;
+                margin-top: 100px;
+                border-radius: 4px;
+                font-family: 'calibri';
+                color: white;
+                box-shadow: 7px 13px 37px #000;
+            }
+
+            .form-register h4 {
+                font-size: 22px;
+                margin-bottom: 20px;
+            }
+
+            .controls {
+                width: 100%;
+                background: #24303c;
+                padding: 10px;
+                border-radius: 4px;
+                margin-bottom: 16px;
+                border: 1px solid #1f53c5;
+                font-family: 'calibri';
+                font-size: 18px;
+                color: white;
+            }
+
+            .form-register p {
+                height: 40px;
+                text-align: center;
+                font-size: 18px;
+                line-height: 40px;
+            }
+
+            .form-register a {
+                color: white;
+                text-decoration: none;
+            }
+
+            .form-register a:hover {
+                color: white;
+                text-decoration: underline;
+            }
+
+            .form-register .botons {
+                width: 100%;
+                background: #1f53c5;
+                border: none;
+                padding: 12px;
+                color: white;
+                margin: 16px 0;
+                font-size: 16px;
+            }
+
+
+            /*BOTON VERDE SUBIR DE EMPLEADO*/
+
+            .table {
+
+                display: grid;
+            }
+
+            .file-input {
+                display: inline-block;
+                position: relative;
+                overflow: hidden;
+                cursor: pointer;
+                padding: 8px 20px;
+                background-color: #4CAF50;
+                color: #fff;
+                border-radius: 4px;
+                border: none;
+                text-align: center;
+            }
+
+            .file-input input[type="file"] {
+                position: absolute;
+                top: 0;
+                right: 0;
+                margin: 0;
+                padding: 0;
+                font-size: 20px;
+                cursor: pointer;
+                opacity: 0;
+            }
+
+            .file-input:hover {
+                background-color: #45a049;
+            }
+
+            .file-input:active {
+                background-color: #3c9039;
+            }
+
+            .button {
+                display: inline-block;
+                position: relative;
+                overflow: hidden;
+                cursor: pointer;
+                padding: 8px 20px;
+                background-color: #4CAF50;
+                color: #fff;
+                border-radius: 4px;
+                border: none;
+                text-align: center;
+            }
+
+            .button input {
+                position: absolute;
+                top: 0;
+                right: 0;
+                margin: 0;
+                padding: 0;
+                font-size: 20px;
+                cursor: pointer;
+                opacity: 0;
+            }
+
+            .button:hover {
+                background-color: #45a049;
+            }
+
+            .button:active {
+                background-color: rgba(104, 103, 103, 0.333);
+            }
+
+            /* APARTADO LISTA*/
+
+            .table {
+                width: 100%;
+                height: 70vh;
+                background-color: rgba(104, 103, 103, 0.333);
+                backdrop-filter: blur(7px);
+                box-shadow: 0 .4rem .8rem #0005;
+                border-radius: .8rem;
+
+                overflow: hidden;
+            }
+
+            .table__header {
+                width: 100%;
+                height: 10%;
+                background-color: #fff4;
+                color: dimgray;
+                padding: .8rem 1rem;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .table__header .input-group {
+                width: 35%;
+                height: 100%;
+                background-color: #fff5;
+                padding: 0 .8rem;
+                border-radius: 2rem;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                transition: .2s;
+            }
+
+            .table__header .input-group:hover {
+                width: 45%;
+                background-color: #fff8;
+                box-shadow: 0 .1rem .4rem #0002;
+            }
+
+            .table__header .input-group img {
+                width: 1.2rem;
+                height: 1.2rem;
+            }
+
+            .table__header .input-group input {
+                width: 100%;
+                padding: 0 .5rem 0 .3rem;
+                background-color: transparent;
+                border: none;
+                outline: none;
+            }
+
+            .table__body {
+                width: 95%;
+                max-height: calc(89% - 1.6rem);
+                background-color: rgba(85, 85, 85, 0.733);
+
+                margin: .8rem auto;
+                border-radius: .6rem;
+
+                overflow: auto;
+                overflow: overlay;
+            }
+
+            .table__body::-webkit-scrollbar {
+                width: 0.5rem;
+                height: 0.5rem;
+            }
+
+            .table__body::-webkit-scrollbar-thumb {
+                border-radius: .5rem;
+                background-color: #0004;
+                visibility: hidden;
+            }
+
+            .table__body:hover::-webkit-scrollbar-thumb {
+                visibility: visible;
+            }
+
+            table {
+                width: 100%;
+            }
+
+            td img {
+                width: 36px;
+                height: 36px;
+                margin-right: .5rem;
+                border-radius: 50%;
+
+                vertical-align: middle;
+            }
+
+            table,
+            th,
+            td {
+                border-collapse: collapse;
+                padding: 1rem;
+                text-align: left;
+            }
+
+            thead th {
+                position: sticky;
+                top: 0;
+                left: 0;
+                background-color: #d5d1defe;
+                cursor: pointer;
+                text-transform: capitalize;
+            }
+
+            tbody tr:nth-child(even) {
+                background-color: #0000000b;
+            }
+
+            tbody tr {
+                --delay: .1s;
+                transition: .5s ease-in-out var(--delay), background-color 0s;
+            }
+
+            tbody tr.hide {
+                opacity: 0;
+                transform: translateX(100%);
+            }
+
+            tbody tr:hover {
+                background-color: #fff6 !important;
+            }
+
+            tbody tr td,
+            tbody tr td p,
+            tbody tr td img {
+                transition: .2s ease-in-out;
+            }
+
+            tbody tr.hide td,
+            tbody tr.hide td p {
+                padding: 0;
+                font: 0 / 0 sans-serif;
+                transition: .2s ease-in-out .5s;
+            }
+
+            tbody tr.hide td img {
+                width: 0;
+                height: 0;
+                transition: .2s ease-in-out .5s;
+            }
+
+            @media (max-width: 1000px) {
+                td:not(:first-of-type) {
+                    min-width: 12.1rem;
+                }
+            }
+
+            thead th span.icon-arrow {
+                display: inline-block;
+                width: 1.3rem;
+                height: 1.3rem;
+                border-radius: 50%;
+                border: 1.4px solid transparent;
+
+                text-align: center;
+                font-size: 1rem;
+
+                margin-left: .5rem;
+                transition: .2s ease-in-out;
+            }
+
+            .btn-info:nth-child(1) {
+                margin-right: 40px;
+                /* Puedes ajustar el valor según el espacio que desees */
+            }
+        </style>
+
+
+        <div th:replace="menu :: #menu-dashboard"></div>
+        <div style="margin-left: 17rem;">
+            <section class="form-register">
+                <h4>Registro de Empleado</h4>
+                <div class="user-form">
+                    <form id="add-user-form">
+                        <div>
+                            <img src="https://stonegatesl.com/wp-content/uploads/2021/01/avatar-300x300.jpg" alt="avatar"
+                                id="img" />
+
+                            <label class="file-input" for="foto">Subir<input type="file" name="foto" id="foto"
+                                    accept="image/*" /></label>
+                        </div>
+                    </form>
+                </div>
+                <input class="controls" type="text" name="nombres" id="nombres" placeholder="Ingrese su Nombre">
+                <input class="controls" type="text" name="apellidos" id="apellidos" placeholder="Ingrese su Apellido">
+                <input class="controls" type="text" name="dni" id="dni" placeholder="Ingrese su Dni">
+                <input class="controls" type="email" name="correo" id="correo" placeholder="Ingrese su Correo">
+                <input class="controls" type="password" name="correo" id="correo" placeholder="Ingrese su Contraseña">
+                <input class="controls" type="text" name="cargo" id="cargo" placeholder="Ingrese su Cargo">
+                <input class="botons" type="submit" value="Registrar">
+            </section>
+
+            <br><br>
+
+            <center>
+                <a th:href="@{/calendario}" type="button" class="btn btn-info" style="display: inline-block;
+            padding: 10px 20px;
+            background-color: #5a5a5a; /* Color de fondo del botón /
+            color: #fff; / Color del texto del botón /
+            text-align: center;
+            text-decoration: none;
+            border-radius: 100px; / Bordes redondeados /
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            transition: background-color 0.3s ease, color 0.3s ease; ">Asistencia</a>
+
+                <a th:href="@{/postulantes}" type="button" class="btn btn-info" style="display: inline-block;
+            padding: 10px 20px;
+            background-color: #5a5a5a; /* Color de fondo del botón /
+            color: #fff; / Color del texto del botón /
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px; / Bordes redondeados /
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            transition: background-color 0.3s ease, color 0.3s ease;">Postulantes</a>
+
+            </center>
+            <div>
+                <div class="table">
+                    <section class="table__header">
+                        <h1>Lista de Empleados</h1>
+                        <div class="input-group">
+                            <input type="search" placeholder="Buscar...">
+                            <img src="images/buscar.png" alt="">
+                        </div>
+                    </section>
+                    <section class="table__body">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th> Id </th>
+                                    <th> Nombre </th>
+                                    <th> Apellido </th>
+                                    <th> Correo </th>
+                                    <th> Contraseña </th>
+                                    <th> Cargo </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td> 73893947 </td>
+                                    <td> Gabriel</td>
+                                    <td> Phoenix </td>
+                                    <td> Gabrieldroxus@gmail.com </td>
+                                    <td> ************ </td>
+                                    <td> Boleteria </td>
+                                </tr>
+
+                                <tr>
+                                    <td> 79846278 </td>
+                                    <td> Jhon </td>
+                                    <td> Michael </td>
+                                    <td> Jhon_153@gmail.com </td>
+                                    <td> ************ </td>
+                                    <td> Limpieza </td>
+                                </tr>
+
+                                <tr>
+                                    <td> 73893947 </td>
+                                    <td> Jose</td>
+                                    <td> Espinoza</td>
+                                    <td> JosEspinoza45_11@gmail.com </td>
+                                    <td> ************ </td>
+                                    <td> Seguridad</td>
+                                </tr>
+
+                                <tr>
+                                    <td> 74125896 </td>
+                                    <td> Miguel</td>
+                                    <td> Caceres</td>
+                                    <td> MiguelCac@gmail.com </td>
+                                    <td> ************ </td>
+                                    <td> Supervisor</td>
+                                </tr>
+                                <tr>
+                                    <td> 78630025</td>
+                                    <td> Luis</td>
+                                    <td> Merengues</td>
+                                    <td> LuchoM_2023@gmail.com </td>
+                                    <td> ************ </td>
+                                    <td> Boleteria</td>
+                                </tr>
+                                <tr>
+                                    <td> 71105896 </td>
+                                    <td> Carlos</td>
+                                    <td> sosa</td>
+                                    <td> CarlitoSosa99@gmail.com </td>
+                                    <td> ************ </td>
+                                    <td> Limpieza</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+
+                    <a th:href="@{/crudempleados}"><input class="botons" type="submit" value="Actualizar Datos">
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+    </body>
+</html>

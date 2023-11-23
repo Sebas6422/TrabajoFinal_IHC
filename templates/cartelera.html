@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- start: Icons -->
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+        <!-- start: Icons -->
+        <!-- start: CSS -->
+        <link rel="stylesheet" href="/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/css/style1up.css">
+        <link rel="stylesheet" href="/css/style2up.css">
+        <link rel="stylesheet" href="/css/StyleEmple.css">
+        <!-- end: CSS -->
+        <link rel="icon" href="/images/logo-cine.ico">
+        <title>Cine</title>
+        <style>
+            .card {
+                background-color: #4b4848; /* Color de fondo de la tarjeta */
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra de la tarjeta */
+                padding: 20px; /* Espaciado interno de la tarjeta */
+                margin: 20px; /* Margen externo de la tarjeta */
+                border-radius: 8px; /* Bordes redondeados de la tarjeta */
+                width: 600px;
+                margin-left: 610px;
+            }
+    
+            #formContainer {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+                margin-left: 200px;
+            }
+    
+            /* Agrega otros estilos según sea necesario */
+    
+        </style>
+    </head>
+
+    <body>
+
+        <!-- start: Sidebar -->
+        <div class="sidebar position-fixed top-0 bottom-0 bg-white border-end">
+            <div class="d-flex align-items-center p-3">
+                <a href="#" class="sidebar-logo text-uppercase fw-bold text-decoration-none text-indigo fs-4">Cine Sp4cex</a>
+                <i class="sidebar-toggle ri-arrow-left-circle-line ms-auto fs-5 d-none d-md-block"></i>
+            </div>
+            <ul class="sidebar-menu p-3 m-0 mb-0" >
+                <li class="sidebar-menu-item active">
+                    <a href="dashboard.html">
+                        <i class="ri-dashboard-line sidebar-menu-item-icon"></i>
+                        Dashboard
+                    </a>
+                </li>
+                <li class="sidebar-menu-divider mt-3 mb-1 text-uppercase">Menú</li>
+                <li class="sidebar-menu-item has-dropdown">
+                    <a href="#">
+                        <i class="ri-pages-line sidebar-menu-item-icon"></i>
+                        Personal
+                        <i class="ri-arrow-down-s-line sidebar-menu-item-accordion ms-auto"></i>
+                    </a>
+                    <ul class="sidebar-dropdown-menu">
+                        <li class="sidebar-dropdown-menu-item">
+                            <a href="/templates/usuario.html">
+                                Usuarios
+                            </a>
+                        </li>
+                        <li class="sidebar-dropdown-menu-item">
+                            <a href="crudempleados.html">
+                                Trabajadores
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="sidebar-menu-item has-dropdown">
+                    <a href="#">
+                        <i class="ri-user-line sidebar-menu-item-icon"></i>
+                        Funciones
+                        <i class="ri-arrow-down-s-line sidebar-menu-item-accordion ms-auto"></i>
+                    </a>
+                    <ul class="sidebar-dropdown-menu">
+                        <li class="sidebar-dropdown-menu-item">
+                            <a href="dulceria_admin.html">
+                                Dulceria
+                            </a>
+                        </li>
+                        <li class="sidebar-dropdown-menu-item">
+                            <a href="promociones_admi.html">
+                                Promociones
+                            </a>
+                        </li>
+                        <li class="sidebar-dropdown-menu-item">
+                            <a href="cartelera.html">
+                                Cartelera
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="sidebar-menu-item has-dropdown">
+                    <a href="#">
+                        <i class="ri-shopping-cart-2-line sidebar-menu-item-icon"></i>
+                        Analisis
+                        <i class="ri-arrow-down-s-line sidebar-menu-item-accordion ms-auto"></i>
+                    </a>
+                    <ul class="sidebar-dropdown-menu">
+                        <li class="sidebar-dropdown-menu-item has-dropdown">
+                            <a href="#">
+                                Ingresos
+                                <i class="ri-arrow-down-s-line sidebar-menu-item-accordion ms-auto"></i>
+                            </a>
+                            <ul class="sidebar-dropdown-menu">
+                                <li class="sidebar-dropdown-menu-item">
+                                    <a href="/templates/IngresoDulceria.html">
+                                        Ingreso Dulceria
+                                    </a>
+                                </li>
+
+                                <li class="sidebar-dropdown-menu-item">
+                                    <a href="/templates/IngresosEntradas.html">
+                                        Ingreso Entradas
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="sidebar-dropdown-menu-item">
+                            <a href="/templates/RecursosHum.html">
+                                Recursos Humanos
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="sidebar-overlay"></div>
+        <!-- end: Sidebar -->
+
+        <!-- start: Main -->
+        <main class="bg-light">
+            <div class="p-2">
+                <!-- start: Navbar -->
+                <nav class="px-3 py-2 bg-white rounded shadow" >
+                    <i class="ri-menu-line sidebar-toggle me-3 d-block d-md-none"></i>
+                    <h5 class="fw-bold mb-0 me-auto" >Cartelera</h5>
+                    <div class="dropdown me-3 d-none d-sm-block">
+                        <div class="cursor-pointer dropdown-toggle navbar-link" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <i class="ri-notification-line"></i>
+                        </div>
+                        <div class="dropdown-menu fx-dropdown-menu">
+                            <h5 class="p-3 bg-indigo text-light">Notification</h5>
+                            <div class="list-group list-group-flush">
+                                <a href="#"
+                                    class="list-group-item list-group-item-action d-flex justify-content-between align-items-start">
+                                    <div class="me-auto">
+                                        <div class="fw-semibold">Productos</div>
+                                        <span class="fs-7">Content for list item</span>
+                                    </div>
+                                    <span class="badge bg-primary rounded-pill">14</span>
+                                </a>
+                                <a href="#"
+                                    class="list-group-item list-group-item-action d-flex justify-content-between align-items-start">
+                                    <div class="me-auto">
+                                        <div class="fw-semibold">Clientes</div>
+                                        <span class="fs-7">Content for list item</span>
+                                    </div>
+                                    <span class="badge bg-primary rounded-pill">14</span>
+                                </a>
+                                <a href="#"
+                                    class="list-group-item list-group-item-action d-flex justify-content-between align-items-start">
+                                    <div class="me-auto">
+                                        <div class="fw-semibold">Empleados</div>
+                                        <span class="fs-7">Content for list item</span>
+                                    </div>
+                                    <span class="badge bg-primary rounded-pill">14</span>
+                                </a>
+                                <a href="#"
+                                    class="list-group-item list-group-item-action d-flex justify-content-between align-items-start">
+                                    <div class="me-auto">
+                                        <div class="fw-semibold">Promociones</div>
+                                        <span class="fs-7">Content for list item</span>
+                                    </div>
+                                    <span class="badge bg-primary rounded-pill">14</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <div class="d-flex align-items-center cursor-pointer dropdown-toggle" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <span class="me-2 d-none d-sm-block">John Doe</span>
+                            <i class="ri-arrow-down-s-line sidebar-menu-item-accordion ms-auto"></i>
+                            <img class="navbar-profile-image"
+                                src="/images/uwu.jpg"
+                                alt="Image">
+                        </div>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                            <li><a class="dropdown-item" href="login.html">Salir</a></li>
+                        </ul>
+                    </div>
+                </nav>
+                <!-- end: Navbar -->
+
+                <!-- start: Content -->
+                <h1>Datos de la Pelicula</h1>
+                <div class="card">
+                    <div id="formContainer" style="display: flex; justify-content: space-between; align-items: flex-start; margin-left: 40px;">
+                        <form class="form" id="employeeForm">
+                            <div class="flex">
+                                <label>
+                                    <input class="input" id="nombre" name="nombre" type="text" placeholder="" required="">
+                                    <span>Nombre</span>
+                                </label>
+
+                                <label>
+                                    <input class="input" type="text" id="director" name="director" placeholder="" required="">
+                                    <span>Director</span>
+                                </label>
+                            </div>
+
+                            <label>
+                                <input class="input" id="date" name="date" type="text" placeholder="" required="">
+                                <span>Fecha de Estreno</span>
+                            </label>
+
+                            <label>
+                                <input class="input" id="actprin" name="actprin" type="text" placeholder="" required="">
+                                <span>Actor principal</span>
+                            </label>
+
+                            <label>
+                                <input class="input" id="clasi" name="clasi" type="text" placeholder="" required="">
+                                <span>Clasificación</span>
+                            </label>
+
+                            <label>
+                                <input class="input" id="costo" name="costo" type="text" placeholder="" required="">
+                                <span>Costo del boleto</span>
+                            </label>
+
+                            <div style="text-align: center;">
+                                <button style="margin-left: 200px;" class="button" role="button">Agregar Pelicula</button>
+                            </div>
+                        </form>
+                        <div id="imagenContainer" style="margin-right: 1000px;">
+                            <label for="imagen">Portada</label>
+                            <input type="file" id="imagen" name="imagen" accept="image/*">
+                            <img id="imagenPrevia" src="#" style="max-width: 250px; max-height: 250px;">
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <h2 style="margin-top: 30px;">Listado de Peliculas</h2>      
+                <table id="employeeTable" class="table-center">
+                    <thead>
+                        <tr>
+                            <th class="text-center">Pelicula</th>
+                           <th class="text-center">Director</th>
+                          <th class="text-center">Fecha de Estreno</th>
+                          <th class="text-center">Actor principal</th>
+<th class="text-center">Clasificación</th>
+<th class="text-center">Costo del boleto</th>
+<th class="text-center">Portada</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Los datos de los empleados se agregarán aquí dinámicamente -->
+                    </tbody>
+                </table>
+            </div>
+
+            <script>
+                // JavaScript para previsualizar la imagen seleccionada
+                document.getElementById("imagen").addEventListener("change", function (event) {
+                    const imagenPrevia = document.getElementById("imagenPrevia");
+                    const file = event.target.files[0];
+
+                    if (file) {
+                        const reader = new FileReader();
+
+                        reader.onload = function (e) {
+                            imagenPrevia.src = e.target.result;
+                            imagenPrevia.style.display = "block";
+                        };
+
+                        reader.readAsDataURL(file);
+                    } else {
+                        imagenPrevia.src = "#";
+                        imagenPrevia.style.display = "none";
+                    }
+                });
+
+                // JavaScript para agregar empleados a la tabla
+                document.getElementById("employeeForm").addEventListener("submit", function (event) {
+                    event.preventDefault();
+
+                    const nombre = document.getElementById("nombre").value;
+                    const director = document.getElementById("director").value;
+                    const date = document.getElementById("date").value;
+                    const actprin = document.getElementById("actprin").value;
+                    const clasi = document.getElementById("clasi").value;
+                    const costo = document.getElementById("costo").value;
+
+
+                    // Obtener la URL de la imagen seleccionada
+                    const imagenPrevia = document.getElementById("imagenPrevia");
+                    const imagenUrl = imagenPrevia.style.display === "block" ? imagenPrevia.src : "";
+
+                    const table = document.getElementById("employeeTable").getElementsByTagName('tbody')[0];
+                    const newRow = table.insertRow(table.rows.length);
+
+                    const cell1 = newRow.insertCell(0);
+                    const cell2 = newRow.insertCell(1);
+                    const cell3 = newRow.insertCell(2);
+                    const cell4 = newRow.insertCell(3);
+                    const cell5 = newRow.insertCell(4);
+                    const cell6 = newRow.insertCell(5);
+                    const cell7 = newRow.insertCell(6); // Agregar una nueva celda para la imagen
+
+                    cell1.innerHTML = nombre;
+                    cell2.innerHTML = director;
+                    cell3.innerHTML = date;
+                    cell4.innerHTML = actprin;
+                    cell5.innerHTML = clasi;
+                    cell6.innerHTML = costo;
+                    // Crear un elemento de imagen en la celda de la imagen
+                    const imagen = document.createElement("img");
+                    imagen.src = imagenUrl;
+                    imagen.style.maxWidth = "100px"; // Estilo para la imagen en la tabla
+                    cell7.appendChild(imagen);
+
+                    // Limpiar los campos del formulario
+                    document.getElementById("nombre").value = "";
+                    document.getElementById("director").value = "";
+                    document.getElementById("date").value = "";
+                    document.getElementById("actprin").value = "";
+                    document.getElementById("clasi").value = "";
+                    document.getElementById("costo").value = "";
+                    document.getElementById("imagen").value = ""; // Limpiar la selección de imagen
+                    imagenPrevia.src = "#";
+                    imagenPrevia.style.display = "none";
+                });
+            </script>
+
+
+
+
+
+                <!-- end: Content -->
+            </div>
+        </main>
+        <!-- end: Main -->
+
+<!-- start: JS -->
+<script src="/js/jquery.min.js"></script>
+<script src="/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.8.0/chart.min.js" integrity="sha512-sW/w8s4RWTdFFSduOTGtk4isV1+190E/GghVffMA9XczdJ2MDzSzLEubKAs5h0wzgSJOQTRYyaz73L3d6RtJSg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="/js/script.js"></script>
+
+<!-- end: JS -->
+
+
+    </body>
+</html>
